@@ -68,8 +68,8 @@
             outline: none;
         }
         input[type=number] {
-  -moz-appearance: textfield;
-}
+        -moz-appearance: textfield;
+        }
 
         button{
             height: 3rem;
@@ -211,27 +211,29 @@
             else if(y < 33){
                 document.getElementById("grade").innerHTML= "Grade :" + "Fail"}
 
-            else if(y => 33){
+            else if(y >= 33 && y<50 ){
                 document.getElementById("grade").innerHTML= "Grade :" + "Third Class"}
 
-            else if(y > 50){
+            else if(y >= 50 && y<60){
                 document.getElementById("grade").innerHTML= "Grade :" + "Second Class"}
 
-            else if(y > 60){
+            else if(y >= 60 && y<70){
                 document.getElementById("grade").innerHTML= "Grade :" + "First Class"}
 
-            else if(y > 70){
+            else if(y >= 70 && y<=100){
                 document.getElementById("grade").innerHTML= "Grade :" + "First Class with Distinction"
 
             }
 
+        }
+
             
             
 
 
 
             
-                    }
+                    
 
             
             
