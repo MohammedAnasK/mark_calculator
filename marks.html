@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result
+    </title>
+
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            margin: 0%;
+            text-align: center;
+            color: white;
+        }
+
+        .main-div{
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(to right, teal, rgb(225, 0, 255)) ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .form-div{
+
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            
+            background: radial-gradient(#fff2 30%, #fff4);;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border-radius: 3%;
+            box-shadow: 0px 0px 7px white;
+            
+
+        }
+
+        /* form{
+            justify-content: center;
+            align-items: center;
+            
+        } */
+
+        input{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: none;
+            padding: 2%;
+            color: white;
+            border: none;
+            background: radial-gradient(#fff2 30%, #fff4);;
+            box-shadow: 0px 0px 2px white;
+            
+            
+            
+        }
+        input:focus{
+            
+            outline: none;
+        }
+        input[type=number] {
+  -moz-appearance: textfield;
+}
+
+        button{
+            height: 3rem;
+            width: 6rem;
+            margin-right: 3rem;
+            margin-left: 3rem;
+            border-radius: 1rem;
+            background: radial-gradient(#fff2 30%, #fff4);;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:active{
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-div">
+        <div class="form-div">
+            <form action="" onsubmit="calculation(event)" onreset="reset()">
+                <label for="math">Maths</label>
+                <br>
+                <input type="number" id="math" min="0" max="100" required placeholder="0-100">
+                <br>
+
+                <label for="eng">English</label>
+                <br>
+                <input type="number" id="eng" min="0" max="100" required placeholder="0-100">
+                <br>
+
+                <label for="comp">Computer</label>
+                <br>
+                <input type="number" id="comp" min="0" max="100" required placeholder="0-100">
+                <br>
+
+                <label for="sci">Sci</label>
+                <br>
+                <input type="number" id="sci" min="0" max="100" required placeholder="0-100">
+                <br>
+
+                
+
+                
+
+
+                <p id="total">Total:</p>
+
+                <p id="percentage">Percentage</p>
+
+                <p id="grade">Grade</p>
+
+
+                <button type="submit">Calculate</button>
+                
+
+                <button type="reset" onclick="document.getElementById('total').innerHTML='Total :',
+                document.getElementById('percentage').innerHTML='Percentage :'
+                document.getElementById('grade').innerHTML='Grade :'
+                
+                ">Clear</button>
+            
+
+                
+
+            </form>
+            
+
+
+            
+                
+            
+
+            
+
+        </div>
+    </div>
+
+    <script>
+
+        function calculation(){
+            event.preventDefault();
+
+            let a = document.getElementById("math");
+            console.log(a.value);
+
+            let b = document.getElementById("eng")
+            console.log(b.value);
+
+            let c = document.getElementById("comp")
+            console.log(c.value);
+
+            let d = document.getElementById("sci")
+            console.log(d.value);
+
+
+
+            let x = Number(a.value) + Number(b.value) + Number(c.value) + Number(d.value)
+
+            console.log(x)
+
+            document.getElementById("total").innerHTML= "Total : " + x;
+
+
+
+            let y = ((Number(a.value) + Number(b.value) + Number(c.value) + Number(d.value))/400) * 100
+
+            console.log(y)
+
+            document.getElementById("percentage").innerHTML= "Total : " + y + "%";
+
+
+            if(y < 33){
+                document.getElementById("grade").innerHTML= "Grade :" + "Fail"}
+
+            if(y => 33){
+                document.getElementById("grade").innerHTML= "Grade :" + "Third Class"}
+
+            if(y > 50){
+                document.getElementById("grade").innerHTML= "Grade :" + "Second Class"}
+
+            if(y > 60){
+                document.getElementById("grade").innerHTML= "Grade :" + "First Class"}
+
+            if(y > 70){
+                document.getElementById("grade").innerHTML= "Grade :" + "First Class with Distinction"
+
+            }
+
+            if(a.value < 33, b.value < 33, c.value < 33, d.value < 33){
+                document.getElementById("grade").innerHTML= "Grade :" + "Fail"
+
+            }
+
+            
+
+            
+                    }
+
+            
+            
+
+
+    </script>
+    
+</body>
+</html>
