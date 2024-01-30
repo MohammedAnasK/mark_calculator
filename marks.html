@@ -170,44 +170,65 @@
 
 
 
+            
+
+
+
             let x = Number(a.value) + Number(b.value) + Number(c.value) + Number(d.value)
 
-            console.log(x)
+            // console.log(x)
 
             document.getElementById("total").innerHTML= "Total : " + x;
 
 
 
+
+            
             let y = ((Number(a.value) + Number(b.value) + Number(c.value) + Number(d.value))/400) * 100
 
-            console.log(y)
+            // console.log(y)
 
             document.getElementById("percentage").innerHTML= "Total : " + y + "%";
 
 
-            if(y < 33){
-                document.getElementById("grade").innerHTML= "Grade :" + "Fail"}
+            // if(a.value < 33 || b.value < 33 || c.value < 33 || d.value < 33){
+            //     document.getElementById("grade").innerHTML= "Grade :" + "Fail"}
+            // else if(y < 33){
+            //     document.getElementById("grade").innerHTML= "Grade :" + "Fail"}
+            // else if(y >= 33){
+            //     document.getElementById("grade").innerHTML= "Grade :" + "Pass"}
+        
+        
 
-            if(y => 33){
-                document.getElementById("grade").innerHTML= "Grade :" + "Third Class"}
+            
 
-            if(y > 50){
-                document.getElementById("grade").innerHTML= "Grade :" + "Second Class"}
-
-            if(y > 60){
-                document.getElementById("grade").innerHTML= "Grade :" + "First Class"}
-
-            if(y > 70){
-                document.getElementById("grade").innerHTML= "Grade :" + "First Class with Distinction"
-
-            }
-
-            if(a.value < 33, b.value < 33, c.value < 33, d.value < 33){
+            if(a.value < 33 || b.value < 33 || c.value < 33 || d.value < 33){
+                console.log('running.....')
                 document.getElementById("grade").innerHTML= "Grade :" + "Fail"
 
             }
 
+            else if(y < 33){
+                document.getElementById("grade").innerHTML= "Grade :" + "Fail"}
+
+            else if(y => 33){
+                document.getElementById("grade").innerHTML= "Grade :" + "Third Class"}
+
+            else if(y > 50){
+                document.getElementById("grade").innerHTML= "Grade :" + "Second Class"}
+
+            else if(y > 60){
+                document.getElementById("grade").innerHTML= "Grade :" + "First Class"}
+
+            else if(y > 70){
+                document.getElementById("grade").innerHTML= "Grade :" + "First Class with Distinction"
+
+            }
+
             
+            
+
+
 
             
                     }
