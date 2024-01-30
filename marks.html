@@ -25,6 +25,16 @@
 
         }
 
+        .demo{
+            height: 100vh;
+            width: 100vw;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
         .form-div{
 
             padding-left: 10%;
@@ -132,6 +142,8 @@
                 <button type="reset" onclick="document.getElementById('total').innerHTML='Total :',
                 document.getElementById('percentage').innerHTML='Percentage :'
                 document.getElementById('grade').innerHTML='Grade :'
+                const g= document.getElementsByClassName('main-div')[0]
+                g.style.background='linear-gradient(to right, teal, rgb(225, 0, 255))'
                 
                 ">Clear</button>
             
@@ -151,7 +163,7 @@
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
 
         function calculation(){
             event.preventDefault();
@@ -204,26 +216,64 @@
 
             if(a.value < 33 || b.value < 33 || c.value < 33 || d.value < 33){
                 console.log('running.....')
+                const g= document.getElementsByClassName("main-div")[0]
+                g.style.background="red"
+                console.log(g)
                 document.getElementById("grade").innerHTML= "Grade :" + "Fail"
 
             }
+            
+
+//             else if (y < 33) {
+//   var elements = document.getElementsByClassName("main-div");
+ 
+//   // Check if there are elements with the specified class
+//   if (elements.length > 0) {
+//     // Loop through all elements and set their background color to "red"
+//     for (var i = 0; i < elements.length; i++) {
+//       elements[i].style.background = "red";
+//     }
+//   }
+// }
 
             else if(y < 33){
-                document.getElementById("grade").innerHTML= "Grade :" + "Fail"}
+               
+                document.getElementById("grade").innerHTML= "Grade :" + "Fail"
+                
+                // document.getElementsByClassName(".main-div")[0].style.background="red"
+                
+            }
+
+            // else if(y < 33){}
 
             else if(y >= 33 && y<50 ){
-                document.getElementById("grade").innerHTML= "Grade :" + "Third Class"}
+                document.getElementById("grade").innerHTML= "Grade :" + "Third Class"
+                const g= document.getElementsByClassName("main-div")[0]
+                g.style.background="teal"
+            }
 
             else if(y >= 50 && y<60){
-                document.getElementById("grade").innerHTML= "Grade :" + "Second Class"}
+                document.getElementById("grade").innerHTML= "Grade :" + "Second Class"
+                const g= document.getElementsByClassName("main-div")[0]
+                g.style.background="teal"}
 
             else if(y >= 60 && y<70){
-                document.getElementById("grade").innerHTML= "Grade :" + "First Class"}
+                document.getElementById("grade").innerHTML= "Grade :" + "First Class"
+                const g= document.getElementsByClassName("main-div")[0]
+                g.style.background="teal"
+            }
 
             else if(y >= 70 && y<=100){
                 document.getElementById("grade").innerHTML= "Grade :" + "First Class with Distinction"
+                const g= document.getElementsByClassName("main-div")[0]
+                g.style.background= "teal"
 
             }
+
+            
+            
+
+
 
         }
 
